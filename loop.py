@@ -7,6 +7,15 @@ while j > 5:
     print(j)
     j = j - 1   # 没有自增自减
 
+# break & continue
+while True:
+    a = input('type a number: ')
+    if a == '1':
+        break  # continue
+    else:
+        pass   # 跳过
+    print('still in while')
+print('out of while')
 
 # ? 可以作为 condition
 # 1.数字
