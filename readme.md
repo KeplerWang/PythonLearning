@@ -2,7 +2,7 @@
 * variable
 * loop & if
 * sequence
-* io
+* IO
 * class & import
 * exception
 * thread
