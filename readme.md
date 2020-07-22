@@ -2,10 +2,11 @@
 * variable
 * loop & if
 * sequence
-* io
+* IO
 * class & import
 * exception
 * thread
+* multiprocessing
 * some other additions
 
 Edited by Kepler
