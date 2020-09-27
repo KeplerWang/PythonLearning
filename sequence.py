@@ -62,47 +62,13 @@ multi_dim_list = [[1, 2],
 print(multi_dim_list[0])  # 一维list
 print(multi_dim_list[1][1])
 
-# 字典 dictionary
-# 1.用 {} 包围
-# 2.字典中有 key 和 value 两种元素，key 和 value 可以是字符串/数字
-# 3.字典是一个无序的容器
-# 4.字典的键必须不可变，可以是数字、字符（串）、元组
-dic0 = {'apple': 1, 123 : 'hello', 1.23 : 'hi', tuple1 : list1}
-print(dic0)
-dic1 = {'apple': 1, 'banana': 2, 'pineapple': 3}
-print(dic1['apple'])
-dic1['banana'] = 22  # 修改
-dic1['pear'] = 4     # 增加
-print(dic1)
-print(dic1.values())    # 以list形式返回dict的value
-print(dic1.popitem())   # 随机返回并删除字典中的一对键和值
-temp = dic1.items()     # 以列表返回可遍历的(键, 值) 元组数组
-for i in temp:
-    print(i, type(i))
-del(dic1['banana'])  # 删除 key='banana' 的元素
-print(dic1)
+# 序列解包
+values = 1, 2, 3, 4, 5
+print(values)
+x, y, z, i, j = values
+print(x, y, z, i, j)
+x, y, z, *rest = values
+print(x, y, z, rest)
+x, y, *rest, z = values
+print(x, y, z, rest)
 
-for key in dic1.keys():     # 通过 key 来遍历
-    print(key, dic1[key])
-
-
-def func():
-    print('func()')
-
-
-# Sequence 组合
-dic2 = {1: [1, 2, 3],
-        2: [4, 5, 6],
-        3: [7, 8, 9],
-        'orange': func}
-print(dic2)
-print(dic2[2])
-print(dic2[2][2])
-dic2['orange']()    # 这时存的是函数的地址 加 () 后实现调用
-
-# 和 list 比较，dict 有以下几个特点：
-# 查找和插入的速度极快，不会随着key的增加而变慢
-# 需要占用大量的内存，内存浪费多
-# 而list相反：
-# 查找和插入的时间随着元素的增加而增加
-# 占用空间小，浪费内存很少
